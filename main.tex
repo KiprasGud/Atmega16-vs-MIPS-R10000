@@ -20,6 +20,10 @@ R10000 yra 64-bitų mikroprocesorius. Jis turi maždaug 6.8 milijonus tranzistor
 Matome, kad Atmega16 yra mažai galios suvartojantis parastas mikrovaldiklis, o MIPS R1000 galingas mikroprocesorius.
 
 \section{Architektūros tipas}
-
-\subsubsectionŪ{}
+\subsubsection*{Atmega16}
+Atmega16 yra Harvardo stiliaus 8-bitų RISC Architektūra. Mikrovaldiklis naudoja registrus. Jis turi 32x8 bendros paskirties registrus. Jo visi 32 registrai yra sujungti su aritmetinės logikos įtaisu (Arithmetic Logic unit), tai jam leidžia gauti prieiga prie dviejų skirtingų registrų vienos instrukcijos vykdymo metu.
+\subsubsection*{MIPS R10000}
+R1000 mikroprocesorius naudoja MIPS ANDES architektūrą.Tai pat naudoja 64-bitų MIPS IV instrukcijų architektūrą. Jis per viena "clock-cycle" gali dekoduoti iki 4 instrukcijų. Mikroprocesorius naudoja dinaminį instrukcijų planavimą ir "Out-of-order execution".
+\subsubsection*{Dalies apibendrinimas}
+Matome, kad abiejų architektūrų pagrindas yra RISC architektūra, tačiau R10000 yra žymiai sudėtingesnė architektūra, kurios tikslas yra skaičiavimų kiekis, o Atmega16 tikslas yra būti patikimam ir paprastam.
 \end{document}
