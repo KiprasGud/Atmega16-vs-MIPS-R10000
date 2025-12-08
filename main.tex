@@ -68,5 +68,12 @@ Abi architektūros palaiko aritmetic/logical, brach, load/store operacijas. Tač
 Atmega16 palaiko penkis adresavimo būdus: Tiesioginį, netiesioginį, netiesioginį su poslinkiu ir netiesioginį su pre-decrement ir post-increment, betarpį.
 \subsubsection*{MIPS R10000}
 R10000 palaiko penkis adresavimo būdus: Registro tiesioginį su poslinkiu, PC santykinį, absoliutų šuolį, registro šuolį,  betarpį.
+\subsection*{I/O galimybės}
+\subsubsection*{Atmega16}
+Atmega16 turi 32 I/O linijas. I/O buvo tvarkomas per tiesioginį adresavimą. Turi 8 kanalų 10-bitų ADC, 3 laikmačius, 4 PWM kanalus, USART, SPI, TWI komunikacijos sąsajas.
+\subsubsection*{MIPS R10000}
+R10000 neturi išorinių įrenginių. I/O operacijos atliekamos per išorines magistrales. Jis susisiekia prie išorinių įrenginių per 64-bitų "Avalanche" magistralę, ji perduoda duomnenis į atmintį arba į I/O įrenginius.
+\subsubsection*{Dalies apibūdinimas}
+Palyginant Atmega16 turi savo I/O, o R10000 turėjo naudoti magistrales, kad galėtų susisiekti su I/O įrenginiais.
 
 \end{document}
