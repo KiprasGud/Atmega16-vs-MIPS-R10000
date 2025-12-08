@@ -86,25 +86,28 @@ Abi architektūros palaiko pertraukimus tačiau Atmega16 naudoja vektorinį mode
 \section{Duomenų tipai}
 \subsubsection*{Atmega16}
 Atmega16 dirba su 8-bitų architektūra, todėl jo pagrindiniai tipai yra 8-bitų ir 16-bitų sveikieji skaičiai. Mikrovaldiklis gerai tinka bitinėms operacijoms, loginėms būsenoms, paprastiems skaičiavimams. Slankiojo kablelio neturi, todėl tokie skaičiavimai atliekami programiškai ir yra lėti. Naudojamas dviejų papildymo kodas (two's complement) neigiamiems skaičiams.
-
 \subsubsection*{MIPS R10000}
 R10000 palaiko daug duomenų tipų: nuo 8 iki 64 bitų sveikųjų skaičių, taip pat 32 ir 64-bitų slankiojo kablelio tipus pagal IEEE 754. Tai leidžia atlikti tikslius skaičiavimus. Slankiojo kablelio operacijos turi atskirą registrų failą, todėl gali būti vykdomos lygiagrečiai su sveikųjų skaičių operacijomis.
 
 \section{Greitaveika}
 \subsubsection*{Atmega16}
 Atmega16 maksimalus  dažnis yra apie 16 MHz. RISC architektūra leidžia vykdyti daugumą instrukcijų per 1 taktą, todėl nors dažnis mažas, mikrovaldiklis efektyvus.
-
 \subsubsection*{MIPS R10000}
 R10000 veikia 150–200 MHz dažniu. Mikroprocesorius vienu metu gali dekoduoti 4 instrukcijas, vykdo „out-of-order execution“, turi gilią pipeline struktūrą, daug vykdymo įrenginių. Dėl to jis gali atlikti milijonus operacijų per sekundę ir yra daug greitesnis nei kiti tuo metu buvę savo klasės procesoriai.
 
 
 \section{Spartinanti atmintis}
-
 \subsubsection*{Atmega16}
 Atmega16 neturi spartinančios atminties, nes jo atminties ir instrukcijų kiekis mažas, o viskas pasiekiama tiesiogiai. Tai sumažina sudėtingumą ir energijos suvartojimą.
-
 \subsubsection*{MIPS R10000}
 R10000 turi spartinančia atmintį: 32 KB L1 instrukcijų cache, 32 KB L1 duomenų cache, išorinę L2 cache iki 4 MB.
+
+\section{Pritaikymas}
+\subsubsection*{Atmega16}
+Atmega16 paprastai naudojamas nedideliuose įterptiniuose projektuose: automatikos valdikliuose, buitiniuose prietaisuose, robotikoje, paprastuose elektronikos projektuose. Jo privalumas yra mažas energijos suvartojimas, paprastas programavimas ir didelis patikimumas.
+Panaudojimo pavyzdys: Įvairūs Arduino tipo valdiklių klonai, temperatūros ar šviesos valdymo sistemos.
+\subsubsection*{MIPS R10000}
+R10000 buvo skirtas serveriams, grafikos darbui ir mokslinei įrangai. Jis buvo naudojamas ten, kur reikalingi skaičiavimai. Panaudojimo pavyzdys: 3D grafika, modeliavimas.
 
 
 \end{document}
