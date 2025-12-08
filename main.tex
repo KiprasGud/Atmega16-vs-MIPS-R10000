@@ -75,5 +75,22 @@ Atmega16 turi 32 I/O linijas. I/O buvo tvarkomas per tiesioginį adresavimą. Tu
 R10000 neturi išorinių įrenginių. I/O operacijos atliekamos per išorines magistrales. Jis susisiekia prie išorinių įrenginių per 64-bitų "Avalanche" magistralę, ji perduoda duomnenis į atmintį arba į I/O įrenginius.
 \subsubsection*{Dalies apibūdinimas}
 Palyginant Atmega16 turi savo I/O, o R10000 turėjo naudoti magistrales, kad galėtų susisiekti su I/O įrenginiais.
+\section{Pertraukimai}
+\subsubsection*{Atmega16}
+Atmega16 turi 21 pertraukimą su fiksuotais prioritetais, mažesnis adresas reiškė didesnį prioritetą. Jo pertraukimai veikia vektoriniu būdu.
+\subsubsection*{MIPS R10000}
+R1000 palaiko pertraukimus per išimtį, turi kelias pertraukimo linijas ir tris rėžimus (user,supervisor,kernel).
+\subsubsection*{Dalies apibūdinimas}
+Abi architektūros palaiko pertraukimus tačiau Atmega16 naudoja vektorinį modelį, o R10000 pertraukimus per išimtį su privilegijų lygiais.
+
+\section{Duomenų tipai}
+
+\subsubsection*{Atmega16}
+Atmega16 dirba su 8-bitų architektūra, todėl jo pagrindiniai tipai yra 8-bitų ir 16-bitų sveikieji skaičiai. Mikrovaldiklis gerai tinka bitinėms operacijoms, loginėms būsenoms, paprastiems skaičiavimams. Slankiojo kablelio neturi, todėl tokie skaičiavimai atliekami programiškai ir yra lėti. Naudojamas dviejų papildymo kodas (two's complement) neigiamiems skaičiams.
+
+\subsubsection*{MIPS R10000}
+R10000 palaiko daug duomenų tipų: nuo 8 iki 64 bitų sveikųjų skaičių, taip pat 32 ir 64-bitų slankiojo kablelio tipus pagal IEEE 754. Tai leidžia atlikti tikslius skaičiavimus. Slankiojo kablelio operacijos turi atskirą registrų failą, todėl gali būti vykdomos lygiagrečiai su sveikųjų skaičių operacijomis.
+
+
 
 \end{document}
