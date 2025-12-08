@@ -60,4 +60,13 @@ R10000 turi puslapinę virtualia atmintį. Virtuali atmintis yra 44-bitų, kas l
 Atmega16 turi 8-bitų RISC komandų sistemą. Mikrovaldiklis turi šias klases: Data transfer, Arithmetic/Logic, Bit, Control, Rotate/Shift, Multiply, MCU. O jo keletas instrukcijų yra tokios: ADD Rd, Rr (Add without Carry); INC Rd (Increment),  ICALL (Indirect Call to (Z)); JMP k (Jump), MOV Rd, Rr (Copy Register); LSL Rd (Logical Shift Left); SEI (Global Interrupt Enable), SEV (Set Two’s Complement Overflow); SLEEP (Sleep), EOR Rd, Rr (Exclusive OR).
 \subsubsection*{MIPS R10000}
 R10000 naudoja MIPS IV architektūros komandų sistemą. Mikroprocesorius turi šias klases: Integer arithmetic/logic, Immediate, Load/Store,Branch/Jump, Coprocessor. Jo keletatas instrukcijų yra tokios: MOVZ (Move Conditional on Zero); TGEI (Trap if Greater Than or Equal Immediate); SYSCALL (System Call); BLTZ (Branch on Less Than Zero); J (Jump), JR (Jump Register); MULT (Multiply Word), DSLL32 (Doubleword Shift Left Logical + 32), ADD (Add Word), LL (Load Linked Word)
+\subsubsection*{Dalies apibendrinimas}
+Abi architektūros palaiko aritmetic/logical, brach, load/store operacijas. Tačiau Stmega16 turi bitų manipuliavimo operacijas, kurių R10000 neturi. Tai pat R10000 turi didesnį registrų failą.
+
+\section{Adresavimo būdai}
+\subsubsection*{Atmega16}
+Atmega16 palaiko penkis adresavimo būdus: Tiesioginį, netiesioginį, netiesioginį su poslinkiu ir netiesioginį su pre-decrement ir post-increment, betarpį.
+\subsubsection*{MIPS R10000}
+R10000 palaiko penkis adresavimo būdus: Registro tiesioginį su poslinkiu, PC santykinį, absoliutų šuolį, registro šuolį,  betarpį.
+
 \end{document}
